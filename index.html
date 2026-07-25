@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickCalc</title>
+    <meta name="theme-color" content="#1f2937">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="./manifest.json">
+</head>
+<body>
+    <div id="splash-screen" class="splash-screen">
+        <div class="loader"></div>
+        <p>Loading QuickCalc...</p>
+    </div>
+
+    <div id="app-container" class="app-container hidden">
+        <div class="calculator-grid">
+            <div class="output">
+                <div data-previous-operand class="previous-operand"></div>
+                <div data-current-operand class="current-operand"></div>
+                <div data-preview-result class="preview-result"></div>
+            </div>
+            <button data-all-clear class="span-two">C</button>
+            <button data-delete>DEL</button>
+            <button data-operation>÷</button>
+            <button data-number>7</button>
+            <button data-number>8</button>
+            <button data-number>9</button>
+            <button data-operation>×</button>
+            <button data-number>4</button>
+            <button data-number>5</button>
+            <button data-number>6</button>
+            <button data-operation>-</button>
+            <button data-number>1</button>
+            <button data-number>2</button>
+            <button data-number>3</button>
+            <button data-operation>+</button>
+            <button data-number class="span-two">0</button>
+            <button data-number>.</button>
+            <button data-equals>=</button>
+        </div>
+    </div>
+
+    <audio id="clickSound" src="data:audio/mpeg;base64,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/l/8v/xf+v//v/y/9P/yf/J//P/mf/P/l/8v/xf+v//v/y/9P/yf/J//P/mf/P/l/8v/xf+v//v/y/9P/yf/J//P/mf/P/l/8v/xf+v//v/y/9P/yf/J//P/mf/P/l/8v/xf+v//v/y/9P/yf/J//P/mf/P/l/8v/xf+v//v/y/9P/yf/J//P/mf/P/l/8v/xf+v//v/y/9P/yf/J//P/mf/P/l/8v/xf+v//v/y/9P/yf/J//P/l/8v/xf+v//v/y/9P/yf/J//P/mf/P/l/8v/xf+v//v/y/9P/yf/J//P/mf/P/l/8v/xf+v//v/y/9P/yf/J//P/mf/P/l/8v/xf+v//v/y/9P/yf/J//P/mf/P/l/8v/xf+v//v/y/9P/yf/J//P/mf/P/l/8v/xf+v//v/y/9P/yf/J//P/mf/P/l/8v/xf+v//v/y/9P/yf/J//P/mf/P/l/8v/xf+v//v/y/9P/yf/J//P/mf/P/l/8v/xf+v//v/y/9P/yf/J//P/mf/P/l/8v/xf+v//v/y/9P/yf/J//P/mf/P/l/8v/xf+v//v/y/9P/yf/J//P/mf/P/l/8v/xf+v//v/y/9P/yf/J//P/mf/P/l/8v/xf+v//v/y/9P/yf/J//P/mf/P/l/8v/xf+v//v/y/9P/yf/J//P/mf/P/l/8v/xf+v//v/y/9P/yf/J//P/mf/P/l/8v/xf+v//v/y/9P/yf/J//P/mf/P/l/8v/xf+v//v/y/9P/yf/J//P/mf/P/l/8v/xf+v//v/y/9P/yf/J//P/mf/P/l/8v/xf+v//v/y/9P/yf/J//P/mf/P/l/8v/xf+v//v/y/9P/yf/J//P/mf/P/l/8v/xf+v//v/y/9P/yf/J//P/mf/P/l/8v/xf+v//v/y/9P/yf/J//P/mf/P/l/8v/xf+v//v/y/9P/yf/J//P/mf/P/l/8v/xf+v//v/y/9P/yf/J//P/mf/P/l/8v/xf+v//v/y/9P/yf/J//P/mf/P/l/8v/xf+v//v/y/9P/yf/J//P/mf/P/l/8v/xf+v//v/y/9P/yf/J//P/mf/P/l/8v/xf+v//v/y/9P/yf/J//P/mf/P/l/8v/xf+v//v/y/9P/yf/J//P/mf/P/l/8v/xf+v//v/y/9P/yf/J//P/mf/P/l/8v/xf+v//v/y/9P/yf/J//P/mf/P/l/8v/xf+v//v/y/9P/yf/J//P/mf/P/l/8v/xf+v//v/y/9P/yf/J//P/mf/P/l/8v/xf+v//v/y/9P/yf/J//P/mf/P/l/8v/xf+v//v/y/9P/yf/J//P/mf/P/l/8v/xf+v//v/y/9P/yf/J//P/mf/P/l/8v/xf+v//v/y/9P/yf/J//P/mf/P/l/8v/xf+v//v/y/9P/yf/J//P/mf/P/l/8v/xf+v//v/y/9P/yf/J//P/mf/P/l/8v/xf+v//v/y/9P/yf/J//P/mf/P/l/8v/xf+v//v/y/9P/yf/J//P/mf/P/l/8v/xf+v//v/y/9P/yf/J//P/mf/P/l/8v/xf+v//v/y/9P/yf/J//P/mf/P/l/8v/xf+v//v/y/9P/yf/J//P/mf/P/l/8v/xf+v//v/y/9P/yf/J//P/mf/P/l/8v/xf+v//v/y/9P/yf/J//P/mf/P/l/8v/xf+v//v/y/9P/yf/J//P/mf/P/l/8v/xf+v//v/y/9P/yf/J//P/mf/P/l/8v/xf+v//v/y/9P/yf/J//P/mf/P/l/8v/xf+v//v/y/9P/yf/J//P/mf/P/l/8v/xf+v//v/y/9P/yf/J//P/mf/P/l/8v/xf+v//v/y/9P/yf/J//P/mf/P/l/8v/xf+v//v/y/9P/yf/J//P/mf/P/l/8v/xf+v//v/y/9P/yf/J//P/mf/P/l/8v/xf+v//v/y/9P/yf/J//P/mf/P/l/8v/xf+v//v/y/9P/yf/J//P/mf/P/l/8v/xf+v//v/y/9P/yf/J//P/mf/P/l/8v/xf+v//v/y/9P/yf/J//P/mf/P/l/8v/xf+v//v/y/9P/yf/J//P/mf/P/l/8v/xf+v//v/y/9P/yf/J//P/mf/P/l/8v/xf+v//v/y/9P/yf/J//P/mf/P/l/8v/xf+v//v/y/9P/yf/J//P/mf/P/l/8v/xf+v//v/y/9P/yf/J//P/xf+u//v/y/9P/yf/J//P/xf+u//v/y/9P/yf/J//P/xf+u/u/z+w+z+x/o//tTugRABAKAQAAF6+Xf+Qf5K/9W/tH8W/2P+n/y79i/kP9X/Wf7v/Wf4P+m/yL/OfzX/Wf4P+m/yL/Of1X/Wf4P+m/yL/OfzX/Wf4P+m/yL/Of1X/Wf4P+m/yL/OfzX/Wf4P+m/yL/Of1X/Wf4P+m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pGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGDyD/H+0gABpGPw0qA=;" preload="auto"></audio>
+
+    <script src="app.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./service-worker.js')
+                    .then(registration => {
+                        console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                    })
+                    .catch(error => {
+                        console.log('ServiceWorker registration failed: ', error);
+                    });
+            });
+        }
+    </script>
+</body>
+</html>
